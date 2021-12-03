@@ -1,10 +1,17 @@
 #ifndef __USART2_H
 #define	__USART2_H
 
+#ifdef KDR_L1_PORT
+#include "stm32l151xc.h"
+#include "stm32l1xx_hal.h"
+#include "stm32l1xx_nucleo.h"
+#else
 #include "stm32l072xx.h"
-#include <stdio.h>
 #include "stm32l0xx_hal.h"
 #include "stm32l0xx_nucleo.h"
+#endif
+
+#include <stdio.h>
 #include <stdint.h>
 #include "gps.h"
 

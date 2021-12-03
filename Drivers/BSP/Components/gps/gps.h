@@ -5,9 +5,18 @@
 #include <stdlib.h> 
 #include <math.h>  
 #include <stdio.h>  
+
+#ifdef KDR_L1_PORT
+#include "stm32l151xc.h"
+#include "stm32l1xx_hal.h"
+#include "stm32l1xx_nucleo.h"
+
+#else
 #include "stm32l072xx.h"
 #include "stm32l0xx_hal.h"
 #include "stm32l0xx_nucleo.h"
+
+#endif
 
 #include "bsp_usart2.h"
 
