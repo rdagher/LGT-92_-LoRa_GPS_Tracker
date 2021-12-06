@@ -5,11 +5,19 @@
 #include "stm32l151xc.h"
 #include "stm32l1xx_hal.h"
 #include "stm32l1xx_nucleo.h"
+
+#else
+#ifdef KDR_L0_PORT
+#include "stm32l073xx.h"
+#include "stm32l0xx_hal.h"
+#include "stm32l0xx_nucleo.h"
+
 #else
 #include "stm32l072xx.h"
 #include "stm32l0xx_hal.h"
 #include "stm32l0xx_nucleo.h"
-#endif
+#endif //KDR_L0_PORT
+#endif //KDR_L1_PORT
 
 #include <stdio.h>
 #include <stdint.h>
